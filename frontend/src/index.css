@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 38 33% 97%;
+    --foreground: 216 28% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 216 28% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 216 28% 15%;
+    --primary: 212 91% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 199 89% 94%;
+    --secondary-foreground: 210 55% 24%;
+    --muted: 43 33% 92%;
+    --muted-foreground: 215 16% 40%;
+    --accent: 23 95% 93%;
+    --accent-foreground: 18 62% 28%;
+    --border: 34 22% 84%;
+    --input: 34 22% 84%;
+    --ring: 212 91% 48%;
+  }
+
+  .dark {
+    --background: 216 31% 10%;
+    --foreground: 42 33% 96%;
+    --card: 218 30% 14%;
+    --card-foreground: 42 33% 96%;
+    --popover: 218 30% 14%;
+    --popover-foreground: 42 33% 96%;
+    --primary: 198 93% 60%;
+    --primary-foreground: 216 31% 10%;
+    --secondary: 217 22% 20%;
+    --secondary-foreground: 42 33% 96%;
+    --muted: 218 20% 18%;
+    --muted-foreground: 214 12% 68%;
+    --accent: 27 65% 25%;
+    --accent-foreground: 34 90% 90%;
+    --border: 216 18% 24%;
+    --input: 216 18% 24%;
+    --ring: 198 93% 60%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 30%),
+      radial-gradient(circle at top right, rgba(249, 115, 22, 0.14), transparent 28%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.3), transparent 40%);
+    min-height: 100vh;
+  }
+
+  code, pre {
+    @apply font-mono;
+  }
+}
+
+@layer utilities {
+  .scrollbar-thin {
+    scrollbar-width: thin;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.45);
+    border-radius: 9999px;
+  }
+}
