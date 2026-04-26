@@ -13,6 +13,9 @@ venv.bak/
 # Virtual environment
 .python-version
 
+# Node modules
+node_modules/
+
 # Distribution / packaging
 build/
 dist/
